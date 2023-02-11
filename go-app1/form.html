@@ -1,0 +1,25 @@
+{{if.success}}
+   <h1> Thanks</h1>
+{{else}}
+
+   <h1>Registration</h1>
+   <form method = "POST">
+       <label>Name:</label><br> 
+       <input type = "text" name ="name"><br> 
+       
+       <label>Username:</label><br> 
+       <input type = "text" name ="username"><br> 
+
+       <label>Email:</label><br> 
+       <input type = "text" name ="email"><br> 
+
+       <label>Password:</label><br> 
+       <input type = "text" name ="password"><br> 
+
+       <label>Confirm Password:</label><br> 
+       <input type = "text" name ="confirm"><br> 
+       <br>
+       <input type ="submit"> 
+   </form>
+
+{{end}}
