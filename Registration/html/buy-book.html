@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Change</title>
+    <link rel = "stylesheet" href = "static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  
+  <style>
+    .group{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	text-decoration: none;
+	color: #080710;
+	text-transform: uppercase;
+}
+
+.group ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.group ul li a{
+	text-decoration: none;
+	color: #080710;
+	text-transform: uppercase;
+}
+.group ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	transition: 0.5s;
+	position: absolute;
+	background: #080710;
+	left: 0;
+	bottom: -5px;
+}
+.group ul li:hover::after{
+width: 100%;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+  top: 50%;}
+
+  .wrapper {
+	background: var(--white);
+	padding: 2rem;
+	max-width: 576px;
+	width: 100%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+	text-align: center;
+    margin-left:50%;
+}
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 2rem;
+}
+.rating .star {
+	cursor: pointer;
+}
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+.btn-group {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+.btn-group .btn.submit {
+	background: var(--blue);
+	color: var(--white);
+}
+.btn-group .btn.submit:hover {
+	background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+	background: var(--white);
+	color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+	background: var(--light);
+}
+.wrapper {
+	background: var(--white);
+	padding: 2rem;
+	max-width: 576px;
+	width: 100%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+	text-align: center;
+    margin-left:50%;
+}
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 2rem;
+}
+.rating .star {
+	cursor: pointer;
+}
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+.btn-group {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+.btn-group .btn.submit {
+	background: var(--blue);
+	color: var(--white);
+}
+.btn-group .btn.submit:hover {
+	background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+	background: var(--white);
+	color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+	background: var(--light);
+}
+:root {
+	--yellow: #FFBD13;
+	--blue: #FF9F00;
+	--blue-d-1: #FFBD13;
+	--light: #F5F5F5;
+	--grey: #AAA;
+	--white: #FFF;
+	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+  </style>  
+  <header>
+      
+      <div class="group">
+        <a href="#" class="logo">Book</a>
+        <ul class="navigation" >
+          <li><a href="http://localhost:8080/main-book">Home</a></li>
+          <li><a href="#about">Shop</a></li>
+          <li><a href="http://localhost:8080/cat-book">Categories</a></li>
+          <li><a href="http://localhost:8080/main-book#about2">About</a></li>
+          <li><a href="http://localhost:8080/register">Register</a></li>
+        </ul>
+       </div>
+    </header>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  let searchBtn = document.querySelector('.searchBtn');
+  let closeBtn = document.querySelector('.closeBtn');
+  let searchBox = document.querySelector('.searchBox');
+  let navigation = document.querySelector('.navigation');
+  let menuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+
+  searchBtn.onclick = function(){
+    searchBox.classList.add('active');
+    closeBtn.classList.add('active');
+    searchBtn.classList.add('active');
+    menuToggle.classList.add('hide');
+    header.classList.remove('open');
+  }
+  closeBtn.onclick = function(){
+    searchBox.classList.remove('active');
+    closeBtn.classList.remove('active');
+    searchBtn.classList.remove('active');
+    menuToggle.classList.remove('hide');
+  }
+  menuToggle.onclick = function(){
+    header.classList.toggle('open');
+    searchBox.classList.remove('active');
+    closeBtn.classList.remove('active');
+    searchBtn.classList.remove('active');
+  }
+</script>
+</head>
+<body>
+
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = "https://i.pinimg.com/564x/85/a4/49/85a449451b01787bc7162f5991c5360b.jpg" alt = "watch">
+                    </div>
+                    
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">For the Wolf - By Hannah Whitten</span>
+                    <span class = "product-price">5740 tg</span>
+                    <div class = "product-rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>(350 ratings)</span>
+                    </div>
+                    <p class = "product-description">
+AN INSTANT NEW YORK TIMES BESTSELLER!
+As the only Second Daughter born in centuries, Red has one purpose—to be sacrificed to the Wolf in the Wood in the hope he’ll return the world’s captured gods.
+<br>
+Red is almost relieved to go. Plagued by a dangerous power she can’t control, at least she knows that in the Wilderwood, she can’t hurt those she loves. Again.
+<br>
+But the legends lie. The Wolf is a man, not a monster. Her magic is a calling, not a curse. And if she doesn’t learn how to use it, the monsters the gods have become will swallow the Wilderwood—and her world—whole.</p>
+                    <div class = "btn-groups">
+                        <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                        <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                    </div>
+                </div>     
+                
+        <div class="wrapper">
+		<h3>Comment the book</h3>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+            </div>
+     
+        </div>
+    </div>
+
+         <script src = "script.js"></script>
+</body>
+</html>
