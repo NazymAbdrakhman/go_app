@@ -1,0 +1,589 @@
+<html>
+	<head>
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/book.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ionic.io/ionicons">
+		<title>Books</title>
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+}
+
+
+.background .shape{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #FFE53B,
+        #FF005B
+    );
+    left: -350px;
+    top: -15px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #00E1FD,
+        #FC007A
+    );
+    right: -350px;
+    bottom: -80px;
+}
+form{
+    height: 500px;
+    width: 900px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 55%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 35px 35px;
+}
+
+.main-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.main-text{
+    max-width:500px;
+    color: #080710;
+}
+.main-text h1{
+    font-size: 2.5rem;
+}
+.main-text p{
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 18px 0 40px;
+}
+.btn1 {
+    border-radius: 2rem;
+    cursor:pointer;
+    display: inline-block;
+    background: linear-gradient(
+        to right,
+        #00E1FD,
+        #FC007A
+    );
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    margin: 5px;
+    margin-top: 100px;
+}
+.btn1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn1:hover span {
+  padding-right: 25px;
+}
+
+.btn1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.section{
+  padding: 50px 10%;
+}
+.home{
+  width: 100%;
+  min-height: 100vh;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+
+}
+.heading{
+  text-align: center;
+  margin-top: 150px;
+}
+.heading span{
+  font-size: 3rem;
+  font-weight: 600;
+  color: #080710;
+}
+.heading h1{
+  font-size:5rem;
+  background: -webkit-linear-gradient(#00E1FD, #FC007A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.shop-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top:6rem;
+}
+.shop-container .box{
+  margin-left: 50px;
+  flex:1 1 20rem;
+  background:#FF005B;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: rgba(255,255,255,0.13);
+    transform: translate(-5%,-20%);
+    top: 150%;
+    left: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.shop-container .box .box-img{
+  width:200px;
+  height:200px;
+  margin-top: -100px;
+}
+.shop-container .box .box-img img{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  object-position: center;
+}
+.stars{
+  margin: 1rem 0 0.1rem;
+}
+.shop-container .box .stars .star{
+  color: #fff;
+}
+.shop-container .box h2{
+  color:#080710;
+  font-size: 1.2rem;
+}
+.shop-container .box span{
+  color:#080710;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.2rem 0 0.5rem;
+}
+.box .btn{
+  border-radius: 2rem;
+    cursor:pointer;
+    display: inline-block;
+    background: linear-gradient(
+        to right,
+        #00E1FD,
+        #FC007A
+    );
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    margin: 5px;
+    margin-top: 60px;
+}
+.box .btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.box .btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.box .btn:hover span {
+  padding-right: 25px;
+}
+.box .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.section .about{
+  background-color: #fff;
+}
+
+.book-box {
+        border: 3px solid #7f8c8d;
+        background-color: #ecf0f1;
+        padding: 20px;
+        width: 400px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin: 50px auto;
+      }
+      .book-image {
+        width: 120px;
+        height: 160px;
+        border-radius: 5px;
+        margin-right: 20px;
+      }
+
+      h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        color: #34495e;
+        font-size: 16px;
+        margin: 0;
+      }
+      
+      .description {
+        margin-top: 20px;
+      }
+      
+      .btn {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn:hover {
+        background-color: #2980b9;
+      }
+
+      
+.about-content{
+  display: flex;
+  height: 600px;
+  width:1000px;
+  background-color: rgba(255,255,255,0.13);
+  transform: translate(30%,5%);
+  top: 30%;
+  left: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 35px 35px;
+}
+
+.inf{
+  width:500px;
+  background-color: #080710;
+  flex-direction: column;
+  padding: 20px;
+	margin-right: auto;
+	display: flex;
+  margin: 0 auto;
+}
+.ic {
+  align-items: left;
+  padding: 5px;
+  font-size: 30px;
+  color: #ecf0f1;
+			display: flex;
+			flex-direction: column;
+			
+			justify-content: flex-end;
+		}
+		
+		.text {margin: 0 auto;
+			font-size: 25px;
+			font-weight: bold;
+			color: #ecf0f1;
+
+		}
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 200;
+}
+      
+</style>
+  
+	</head>
+	<body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>
+		<header >
+      
+      <div class="group">
+        <a href="#" class="logo">Book</a>
+        <ul class="navigation" >
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Shop</a></li>
+          <li><a href="http://localhost:8080/cat-book">Categories</a></li>
+          <li><a href="#about2">About</a></li>
+          <li><a href="http://localhost:8080/register">Register</a></li>
+        </ul>
+       </div>
+    </header>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  let searchBtn = document.querySelector('.searchBtn');
+  let closeBtn = document.querySelector('.closeBtn');
+  let searchBox = document.querySelector('.searchBox');
+  let navigation = document.querySelector('.navigation');
+  let menuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+
+  searchBtn.onclick = function(){
+    searchBox.classList.add('active');
+    closeBtn.classList.add('active');
+    searchBtn.classList.add('active');
+    menuToggle.classList.add('hide');
+    header.classList.remove('open');
+  }
+  closeBtn.onclick = function(){
+    searchBox.classList.remove('active');
+    closeBtn.classList.remove('active');
+    searchBtn.classList.remove('active');
+    menuToggle.classList.remove('hide');
+  }
+  menuToggle.onclick = function(){
+    header.classList.toggle('open');
+    searchBox.classList.remove('active');
+    closeBtn.classList.remove('active');
+    searchBtn.classList.remove('active');
+  }
+</script>
+<section class="home" id="home">
+<form>
+  <div class="main-content">
+      <div class="main-text">
+          <h1>New and Trending</h1>
+          <p>Explore new books everyday, anywhere!</p>
+
+          <a href ="#Fiction" class="btn1" style="vertical-align:middle"><span>View Books</span></a>
+      </div>
+      <div class="main-img">
+         <img src="https://i.pinimg.com/564x/37/0e/8d/370e8dadb8ab358874e3d09dceda1303.jpg" style=" height: 400px; float: right">
+      </div>
+  </div>
+</form>
+</section>
+
+<section class="about" id="about">
+  <div class="heading">
+    <span>Shop Now</span>
+    <h1>Shop Book</h1>
+  </div>
+  <div class="shop-container">
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/564x/ed/6c/f7/ed6cf71f080d2d30356215111dedb4e9.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>Твои границы</h2>
+      <span>2500 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/236x/3b/86/10/3b8610927d095dc7877eb372ddab2bc7.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>Управление тревогой</h2>
+      <span>2750 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/236x/19/f4/ee/19f4eed803746d19ca24fce9feb5c1fc.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>Внутреннее спокойствие</h2>
+      <span>3650 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="Fiction" id="Fiction">
+  
+  <div class="heading">
+    <h1>Categories</h1>
+  </div>
+
+  <div class="shop-container">
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/564x/85/a4/49/85a449451b01787bc7162f5991c5360b.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>For The Wolf</h2>
+      <span>5740 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/564x/ab/d0/45/abd045a943dc9d8a85099f4a139dfc07.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>Heartless Wood</h2>
+      <span>6550 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+      <div class="box-img">
+        <img src="https://i.pinimg.com/564x/c0/8a/36/c08a36c6183f4c99f1de9fb9fb679814.jpg">
+      </div>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+      <h2>A study in treason</h2>
+      <span>3650 tg</span>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <section class="about2" id="about2">
+
+    <div class="heading">
+      <h1>About</h1>
+    </div>
+
+        <div class="about-content">
+            <div class="main-text">
+                <h1>Contuct us</h1>
+                <p>You can contact us everywhere, anytime!</p>
+                <label for="name">Name</label>
+          <input type="text" placeholder="Name" id="name">
+  
+  
+          <label for="username">Username</label>
+          <input type="text" placeholder="Username" id="username">
+  
+          <label for="message">Message</label>
+          <input type="message" placeholder="Message" id="message">
+      
+                <a href ="#Fiction" class="btn1" style="vertical-align:middle ; margin-top: 20px;"><span>Contacts...</span></a>
+            </div>
+               <div class="inf">
+                  <h2 style="color: #ecf0f1; text-align: center;">Information</h2>
+                  <div class="ic">
+          <div>
+          <ion-icon name="mail-outline"></ion-icon>
+          <span class="text">Email.gmail.com</span>
+          </div>
+          <div>
+            
+            <ion-icon name="storefront-outline"></ion-icon>
+            <span class="text">Almaty Region</span>
+          </div>
+          <div>
+            
+            <ion-icon name="call-outline"></ion-icon>
+            <span class="text">+747 852 963</span>
+          </div>
+          <div>
+            
+            <ion-icon name="time-outline"></ion-icon>
+            <span class="text">9:00 - 18:00</span>
+        </div>
+               </div>
+            
+        </div>
+       
+        
+       
+  </section>
+</body>
+</html>
